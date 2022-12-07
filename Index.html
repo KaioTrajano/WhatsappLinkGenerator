@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/95442199ab.js" crossorigin="anonymous"></script>
+</head>
+
+<script src="/scripts.js"></script>
+
+
+<body>
+    
+
+   
+    <form name="form_main" class="form">
+        <img class="logo" src="/logo.png">
+        <h1>Gerador de link Whatsapp</h1>
+      <label class="numero" for="number">Número: </label>
+      <input type="text" name="number" id="number" required="required"> <br>
+      <label  for="message">Mensagem: </label>
+     
+      <textarea name="message" rows="5" cols="50" id="message"></textarea>
+  
+      
+      <button class="gerar" type="button" onclick="generateLink()">Gerar</button>
+
+      
+      <div class="resultado" id="resultado">
+        <input id="end_url" name="texto"></input>
+        <button onclick="copiarTexto()" type="button" class="copiartexto"><i class="fa-regular fa-copy"></i> Copiar</button>
+      </div>
+      
+    </form>
+
+
+
+</body>
+</html>
