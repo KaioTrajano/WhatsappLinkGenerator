@@ -12,8 +12,9 @@ function generateLink() {
    
     let message = document.form_main.message.value;
     let url = "https://wa.me/";
-    let end_url = `${url}${number}?text=${message}.replace(/ /g, "%20")`;
-    document.getElementById('end_url').value = end_url;
+    let end_url = `${url}${number}?text=${message}`;
+    let urlformatada = end_url.replace(/ /g, "%20")
+    document.getElementById('end_url').value = urlformatada;
     botaocopiar.innerHTML = `<i class="fa-regular fa-copy"></i> Copiar`
     resultado.style.display = "flex"
     
