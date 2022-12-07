@@ -30,3 +30,5 @@ function generateLink() {
     botaocopiar.innerHTML = "Copiado!"
     
 }
+
+console.log("att")
