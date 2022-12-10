@@ -2,7 +2,7 @@ let botaocopiar = document.querySelector(".copiartexto")
 let resultado = document.querySelector(".resultado")
 
 function generateLink() {
-    let number = document.form_main.number.value;
+    let number = document.form_main.number.value.replace(/[^a-zA-Z0-9 ]/g, "");;
     if(number == ""){
         return
     }
