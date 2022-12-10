@@ -2,7 +2,7 @@ let botaocopiar = document.querySelector(".copiartexto")
 let resultado = document.querySelector(".resultado")
 
 function generateLink() {
-    let number = document.form_main.number.value.replace(/[^a-zA-Z0-9 ]/g, "");;
+    let number = document.form_main.number.value.replace(/[^a-zA-Z0-9 ]/g, "").replace(" ", "");
     if(number == ""){
         return
     }
@@ -10,10 +10,10 @@ function generateLink() {
     let resultadolink = document.getElementById("resultado")
     resultadolink.style.display = "flex"
    
-    let message = document.form_main.message.value;
+    let message = document.form_main.message.value.replace(/ /g, "%20");
     let url = "https://wa.me/";
     let end_url = `${url}55${number}?text=${message}`;
-    let urlformatada = end_url.replace(/ /g, "%20")
+    let urlformatada = end_url
     document.getElementById('end_url').value = urlformatada;
     botaocopiar.innerHTML = `<i class="fa-regular fa-copy"></i> Copiar`
     resultado.style.display = "flex"
@@ -30,5 +30,3 @@ function generateLink() {
     botaocopiar.innerHTML = "Copiado!"
     
 }
-
-console.log("att")
